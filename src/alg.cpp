@@ -17,18 +17,11 @@ int binserach(int* arr, int len, int value) {
                 i++;
             }
             return count;
-        }
-        else if (arr[mid] < value) {
-            low = mid + 1;
-        }
-        else {
-            high = mid - 1;
-        }
+        } else if (arr[mid] < value) low = mid + 1;
+        else high = mid - 1;
     }
     return count;
 }
-
-
 int Edge(int* arr, int size, int value)
 {
     for (int i = 0; i < size; ++i)
@@ -41,7 +34,6 @@ int Edge(int* arr, int size, int value)
     }
     return 0;
 }
-
 int countPairs1(int* arr, int len, int value)
 {
     int count = 0;
@@ -75,7 +67,6 @@ int countPairs2(int* arr, int len, int value)
     }
     return count;
 }
-
 int countPairs3(int* arr, int len, int value) {
     int count = 0;
     for (int i = 0; i < len; i++) {
