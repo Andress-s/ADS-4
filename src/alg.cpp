@@ -1,3 +1,5 @@
+//Copyright 2023 Andress-s
+
 int binserach(int* arr, int len, int value) {
     int low = 0;
     int high = len - 1;
@@ -17,8 +19,9 @@ int binserach(int* arr, int len, int value) {
                 i++;
             }
             return count;
-        } else if (arr[mid] < value) low = mid + 1;
-        else high = mid - 1;
+        } else if (arr[mid] < value) {
+            low = mid + 1;
+        } else high = mid - 1;
     }
     return count;
 }
@@ -43,8 +46,7 @@ int countPairs1(int* arr, int len, int value) {
     }
     return count;
 }
-int countPairs2(int* arr, int len, int value)
-{
+int countPairs2(int* arr, int len, int value) {
     int count = 0;
     len = Edge(arr, len, value);
     for (int i = 0; i < len; ++i) {
