@@ -22,28 +22,21 @@ int binserach(int* arr, int len, int value) {
     }
     return count;
 }
-int Edge(int* arr, int size, int value)
-{
-    for (int i = 0; i < size; ++i)
-    {
-        if (value < arr[i])
-        {
+int Edge(int* arr, int size, int value) {
+    for (int i = 0; i < size; ++i) {
+        if (value < arr[i]) {
             return i;
             break;
         }
     }
     return 0;
 }
-int countPairs1(int* arr, int len, int value)
-{
+int countPairs1(int* arr, int len, int value) {
     int count = 0;
 
-    for (int i = 0; i < len; ++i)
-    {
-        for (int j = i + 1; j < len; ++j)
-        {
-            if (value == arr[i] + arr[j])
-            {
+    for (int i = 0; i < len; ++i) {
+        for (int j = i + 1; j < len; ++j) {
+            if (value == arr[i] + arr[j]) {
                 count++;
             }
         }
@@ -54,13 +47,10 @@ int countPairs2(int* arr, int len, int value)
 {
     int count = 0;
     len = Edge(arr, len, value);
-    for (int i = 0; i < len; ++i)
-    {
-        for (int j = i + 1; j < len; ++j)
-        {
+    for (int i = 0; i < len; ++i) {
+        for (int j = i + 1; j < len; ++j) {
             int sum_arr = arr[i] + arr[j];
-            if (value == sum_arr)
-            {
+            if (value == sum_arr) {
                 count++;
             }
         }
