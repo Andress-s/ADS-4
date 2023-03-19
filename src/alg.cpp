@@ -21,7 +21,7 @@ int binserach(int* arr, int len, int value) {
             return count;
         } else if (arr[mid] < value) {
             low = mid + 1;
-        } else { 
+        } else {
             high = mid - 1;
         }
     }
